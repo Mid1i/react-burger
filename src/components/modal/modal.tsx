@@ -8,6 +8,8 @@ import type { ReactNode } from 'react';
 
 import styles from './modal.module.css';
 
+const modalRoot = document.getElementById('modals')!;
+
 type TModalProps = {
   title?: string;
   ariaLabel?: string;
@@ -93,6 +95,6 @@ export const Modal = ({
         {children}
       </section>
     </div>,
-    document.body
+    modalRoot
   );
 };
