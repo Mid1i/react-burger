@@ -1,9 +1,57 @@
 .burger_ingredients {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  min-width: 0;
+  min-height: 0;
   color: var(--text-primary-color);
-  font-family: 'Jet Brains Mono', serif;
+}
+
+.menu > li {
+  flex: 1;
+  min-width: 0;
+}
+
+.ingredients {
+  position: relative;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 24px;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 208px;
+  padding: 0;
+  color: inherit;
+  text-align: center;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .menu {
@@ -12,4 +60,15 @@
   padding: 0;
   text-align: center;
   list-style-type: none;
+}
+
+.menu > li > * {
+  min-width: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--colors-interface-accent);
+  outline-offset: 4px;
 }
