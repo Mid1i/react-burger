@@ -1,7 +1,75 @@
 .burger_constructor {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  padding-bottom: 20px;
+  min-width: 0;
+  min-height: 0;
   color: var(--text-primary-color);
+}
+
+.stack {
+  display: flex;
+  flex: 0 1 656px;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 256px;
+}
+
+.locked {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.locked > * {
+  width: 100%;
+}
+
+.fillings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  overscroll-behavior: contain;
+}
+
+.row {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.row > svg {
+  flex-shrink: 0;
+}
+
+.row > :last-child {
+  width: 100%;
+  min-width: 0;
+}
+
+.checkout {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.total > svg {
+  width: 36px;
+  height: 36px;
+}
+
+.element {
+  background-color: var(--background);
 }
